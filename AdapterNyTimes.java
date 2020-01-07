@@ -3,6 +3,7 @@ package com.example.altkamulassesignment;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.content.res.Resources;
 
 import android.net.ConnectivityManager;
@@ -31,6 +32,7 @@ import com.example.altkamulassesignment.model.Media;
 
 import java.util.List;
 
+import static androidx.core.content.ContextCompat.startActivity;
 
 
 public class AdapterNyTimes extends RecyclerView.Adapter<AdapterNyTimes.ViewHolder> {
@@ -50,6 +52,7 @@ public class AdapterNyTimes extends RecyclerView.Adapter<AdapterNyTimes.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public ImageView picture;
+        public ImageView details;
 
         //*** code changed ***
         //public TextView txt_item_list_product_name;
@@ -67,6 +70,7 @@ public class AdapterNyTimes extends RecyclerView.Adapter<AdapterNyTimes.ViewHold
             Abstract = v.findViewById(R.id.tvAbs);
             Title = v.findViewById(R.id.tvArticalBy);
             date = v.findViewById(R.id.date);
+            details = v.findViewById(R.id.details);
 
 
         }
@@ -91,6 +95,24 @@ public class AdapterNyTimes extends RecyclerView.Adapter<AdapterNyTimes.ViewHold
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+
+
+
+        holder.details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(mContext, DetailsActivity.class);
+                intent.putExtra("Title",media.get(holder.getAdapterPosition()).getTitle() );
+                intent.putExtra("Picture",media.get(holder.getAdapterPosition()).getAbstract() );
+                intent.putExtra("Abstract",media.get(holder.getAdapterPosition()).getUrl() );
+                intent.putExtra("Date",media.get(holder.getAdapterPosition()).getPublished_date() );
+               mContext. startActivity(intent);
+
+
+            }
+        });
 
         try {
             Glide.with(mContext).load(media.get(position).getUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.picture);
