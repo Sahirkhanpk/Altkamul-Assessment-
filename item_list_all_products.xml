@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/image"
+       android:layout_gravity="center"></ImageView>
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/tvAbs"
+            android:text="ny akjasdgasgdjasdhgajsdgh     sdsdhsjdhksjdhskjdhksjdhskjdhjd  f  ff gfg fg f gf gf g fg "
+            android:maxLines="3"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/tvArticalBy"
+            android:text="ny akjasdgasgdjasdhgajsdgh     sdsdhsjdhksjdhskjdhksjdhskjdhjd  f  ff gfg fg f gf gf g fg "
+            android:maxLines="3"/>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="90dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:background="@drawable/calendar-interface-symbol-tool"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:id="@+id/date"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/details"
+        android:layout_gravity="center"
+        android:background="@drawable/details_24dp"/>
+</LinearLayout>
