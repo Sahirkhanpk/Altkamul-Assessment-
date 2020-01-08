@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".DetailsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:title="NY Times Most Popular"
+        android:layout_marginBottom="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:id="@+id/rlt_notification_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:id="@+id/img_product_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:src="@drawable/cat_fruits" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlt_notification_img">
+
+                <TextView
+                    android:id="@+id/txt_notification_title"
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:maxLines="5"
+                    android:text="Title"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_notification_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toRightOf="@+id/txt_notification_title"
+                    android:text="28-Aug-2019"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_notification_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_notification_title"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="lskhkdjkhajdhkasjdsxbnbxbnkasjdakjdkhajdhkasjdhkasdhaksdhakshdkasjdhaskdhaksjdhaksdhaksjdhka2 days ago"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+</LinearLayout>
